@@ -1,0 +1,38 @@
+{
+  "name": "events-spec-bbgm",
+  "version": "1.0.0",
+  "description": "BBGM Event Parsing & Categorization System",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawnmalik1/events-spec-bbgm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shawnmalik1/events-spec-bbgm/issues"
+  },
+  "homepage": "https://github.com/shawnmalik1/events-spec-bbgm#readme",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "vitest": "^4.1.5"
+  }
+}
