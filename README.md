@@ -9,21 +9,20 @@ npm install
 npm run build
 ```
 
-Project Structure
+## Project Structure
 
-events-spec-bbgm/
-├── src/
-│ ├── types.ts # All TypeScript interfaces
-│ ├── utils.ts # HTML stripping, categorization, game matching
-│ ├── parser.ts # Main parseLeagueEvents function (5-stage pipeline)
-│ ├── parser.test.ts # Unit tests
-│ └── index.ts # Public exports
-├── package.json
-└── tsconfig.json
+```
+src/
+├── types.ts        # TypeScript interfaces
+├── utils.ts        # HTML stripping, categorization, game matching
+├── parser.ts       # Main parseLeagueEvents function
+├── parser.test.ts  # Unit tests
+└── index.ts        # Public exports
+```
 
-What's Implemented
+## How It Works
 
-Main function: parseLeagueEvents(input) - processes raw BBGM data through a 5-stage pipeline:
+`parseLeagueEvents(input)` processes raw BBGM data through a 5-stage pipeline:
 
 1. Filter to current season
 2. Categorize by score + type
@@ -31,21 +30,7 @@ Main function: parseLeagueEvents(input) - processes raw BBGM data through a 5-st
 4. Match game highlights to games
 5. Assemble output
 
-Exports:
-
-- parseLeagueEvents - main function
-- All types from the spec (BBGMEvent, ParsedEvent, ImportantGame, etc.)
-- Utility functions for advanced usage
-
-Tests cover all 8 areas from the spec:
-
-- Text stripping
-- Categorization logic
-- Season filtering
-- Game matching (win/loss perspectives)
-- Deduplication
-- Missing text fallbacks
-- Threshold configuration
+**Exports:** `parseLeagueEvents`, all TypeScript types, utility functions for advanced usage.
 
 ## Usage
 
